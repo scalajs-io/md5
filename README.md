@@ -56,3 +56,4 @@ Optionally, you may add the Sonatype Repository resolver:
 
 ```sbt   
 resolvers += Resolver.sonatypeRepo("releases") 
+```
