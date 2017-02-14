@@ -1,21 +1,23 @@
 MD5 API for Scala.js
 ================================
-This is a Scala.js type-safe binding for [MD5](https://www.npmjs.com/package/md5)
+[MD5](https://www.npmjs.com/package/md5) - js function for hashing messages with MD5
 
-A JavaScript function for hashing messages with MD5.
+### Description
 
-#### Build Dependencies
+js function for hashing messages with MD5.
 
-* [ScalaJs.io v0.3.x](https://github.com/ldaniels528/scalajs.io)
+### Build Dependencies
+
+* [ScalaJs.io v0.3.x](https://github.com/scalajs-io/scalajs.io)
 * [SBT v0.13.13](http://www.scala-sbt.org/download.html)
 
-#### Build/publish the SDK locally
+### Build/publish the SDK locally
 
 ```bash
  $ sbt clean publish-local
 ```
 
-#### Running the tests
+### Running the tests
 
 Before running the tests the first time, you must ensure the npm packages are installed:
 
@@ -29,27 +31,32 @@ Then you can run the tests:
 $ sbt test
 ```
 
-#### Examples
+### Examples
 
 Convert a string to MD5:
 
 ```scala
-assert(MD5("Hello Wold") == "7e1c79bda939ad9f46a382a56df147e1")
+import io.scalajs.npm.md5._
+
+MD5("Hello Wold") //=> 7e1c79bda939ad9f46a382a56df147e1
 ```
 
 Convert a buffer to MD5:
 
 ```scala
+import io.scalajs.nodejs.buffer.Buffer
+import io.scalajs.npm.md5._
+
 val buffer = Buffer.from("Hello Wold")
-assert(MD5(buffer) == "7e1c79bda939ad9f46a382a56df147e1")
+MD5(buffer) //=> 7e1c79bda939ad9f46a382a56df147e1
 ```
 
-#### Artifacts and Resolvers
+### Artifacts and Resolvers
 
-To add the Moment binding to your project, add the following to your build.sbt:  
+To add the `MD5` binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "md5" % "0.3.0.3"
+libraryDependencies += "io.scalajs.npm" %%% "md5" % "1.0.2"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:
