@@ -8,7 +8,7 @@ js function for hashing messages with MD5.
 
 ### Build Dependencies
 
-* [SBT v0.13.13](http://www.scala-sbt.org/download.html)
+* [SBT v0.13.16](http://www.scala-sbt.org/download.html)
 
 ### Build/publish the SDK locally
 
@@ -55,7 +55,7 @@ MD5(buffer) //=> 7e1c79bda939ad9f46a382a56df147e1
 To add the `MD5` binding to your project, add the following to your build.sbt:  
 
 ```sbt
-libraryDependencies += "io.scalajs.npm" %%% "md5" % "0.4.0"
+libraryDependencies += "io.scalajs.npm" %%% "md5" % "0.4.1"
 ```
 
 Optionally, you may add the Sonatype Repository resolver:
