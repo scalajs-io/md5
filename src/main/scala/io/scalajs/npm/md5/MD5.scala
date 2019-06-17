@@ -18,7 +18,7 @@ object MD5 extends js.Object {
 
   /**
     * Returns the MD5 encoded string generated from a given string or buffer
-    * @param value the given [[String string]] or [[Buffer]]
+    * @param value the given [[String]] or [[Buffer]]
     * @return the MD5 encoded string
     */
   def apply(value: String | Buffer): String = js.native
